@@ -27,9 +27,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeng/resources/themes/saga-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/chart.js/dist/Chart.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -135,5 +140,8 @@
       }
     }
   },
-  "defaultProject": "star-admin-angular"
+  "defaultProject": "star-admin-angular",
+  "cli": {
+    "analytics": "71979f6b-d943-4f4f-b513-7f4ab330ab6a"
+  }
 }

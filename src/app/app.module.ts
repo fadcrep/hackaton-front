@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -26,6 +27,9 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { TooltipsComponent } from './tooltips/tooltips.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { TabsComponent } from './tabs/tabs.component';
+
+import {ChartModule} from 'primeng/chart';
+import {ToastModule} from 'primeng/toast';
 
 @NgModule({
   declarations: [
@@ -54,6 +58,9 @@ import { TabsComponent } from './tabs/tabs.component';
     BrowserModule,
     RouterModule,
     AppRoutingModule,
+    HttpClientModule,
+    ChartModule,
+    ToastModule,
     FormsModule,
     NgbModule
   ],
