@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
   public bestSellerUrl: string = "v1/employees/best";
   public bestProductSoldUrl: string = "v1/orders/products/best";
   public employeesNumber: number;
-  public salesMoney: number;
+  public salesMoney: any;
   public ordersNumber: number;
   public ordersShippedNumber: number;
   public bestSellerNumber:number;
