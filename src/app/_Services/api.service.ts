@@ -4,6 +4,7 @@ import { retry, catchError, map } from 'rxjs/operators';
 import { UtilsService } from './utils.service';
 import { Observable, throwError } from 'rxjs';
 import { BestSellers } from '../_Models/bestSellers';
+import { BestProductSold } from '../_Models/bestProductSold';
 
 @Injectable({
   providedIn: 'root'
@@ -63,6 +64,15 @@ export class ApiService {
         catchError(this.errorHandl)
       )
   }
+
+  bestProductSold(endUrl: string): Observable<BestProductSold[]> {
+    return this.httpClient.get<BestProductSold[]>(this.baseURL + endUrl, this.httpOptions)
+      .pipe(
+        retry(3),
+        catchError(this.errorHandl)
+      )
+  }
+ 
 
 
   errorHandl(error) {
