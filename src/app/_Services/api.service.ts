@@ -5,6 +5,7 @@ import { UtilsService } from './utils.service';
 import { Observable, throwError } from 'rxjs';
 import { BestSellers } from '../_Models/bestSellers';
 import { BestProductSold } from '../_Models/bestProductSold';
+import { Employees } from '../_Models/employees';
 
 @Injectable({
   providedIn: 'root'
@@ -67,6 +68,22 @@ export class ApiService {
 
   bestProductSold(endUrl: string): Observable<BestProductSold[]> {
     return this.httpClient.get<BestProductSold[]>(this.baseURL + endUrl, this.httpOptions)
+      .pipe(
+        retry(3),
+        catchError(this.errorHandl)
+      )
+  }
+
+  listEmployees(endUrl: string): Observable<Employees[]> {
+    return this.httpClient.get<Employees[]>(this.baseURL + endUrl, this.httpOptions)
+      .pipe(
+        retry(3),
+        catchError(this.errorHandl)
+      )
+  }
+
+  listSales(endUrl: string): Observable<Object[]> {
+    return this.httpClient.get<Object[]>(this.baseURL + endUrl, this.httpOptions)
       .pipe(
         retry(3),
         catchError(this.errorHandl)

@@ -22,10 +22,7 @@ export class DashboardComponent implements OnInit {
   public ordersNumber: number;
   public ordersShippedNumber: number;
   public bestSellerNumber:number;
-  
-  
-  
-  
+   
   data:any;
 
   constructor(private apiService: ApiService) { }

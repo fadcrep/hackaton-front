@@ -21,8 +21,8 @@ import { TabsComponent } from './tabs/tabs.component';
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'forms', component: FormsComponent },
-  { path: 'buttons', component: ButtonsComponent },
+  { path: 'employees', component: FormsComponent },
+  { path: 'sales', component: ButtonsComponent },
   { path: 'tables', component: TablesComponent },
   { path: 'icons', component: IconsComponent },
   { path: 'typography', component: TypographyComponent },
